@@ -1,6 +1,8 @@
 import React from 'react';
 import { SetTemp } from './SetTemp';
 
+// before making functions in SetTemp component,
+// set state and make function in Body component first.
 class Body extends React.Component {
     state = {
         temperature: 0
@@ -23,6 +25,5 @@ class Body extends React.Component {
         )
     }
 }
-
 
 export { Body }

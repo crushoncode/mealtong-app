@@ -10,6 +10,7 @@ const MealtongApp = () => {
             <Body />
         </div>
     )
-  };
+};
+
 
 export default MealtongApp
