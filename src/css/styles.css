@@ -15,13 +15,13 @@ html {
   margin-left: 40px;
 }
 .header-title {
-  font-size: 30px;
+  font-size: 33px;
   color: #e242b2;
   margin-bottom: 10px;
 }
 
 .header-subtitle {
-  font-size: 18px;
+  font-size: 20px;
   color: #f7e6e6;
   line-height: 25px;
 }
@@ -44,7 +44,7 @@ html {
 }
 
 .restaurant-name {
-  font-size: 18px;
+  font-size: 22px;
   color: #f7e6e6;
 }
 
@@ -56,7 +56,7 @@ html {
   position: relative;
   margin-top: 30px;
   color: #e242b2;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .range {
