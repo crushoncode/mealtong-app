@@ -14,9 +14,23 @@ class Deck extends React.Component {
       }
       return false;
     });
+
     // map over matchingRestaurants
     const listItems = matchingRestaurants.map((restaurant) => {
-      return <div key={restaurant.id}> {restaurant.name} </div>;
+      return (
+        <div className="card-container">
+          <div className="card">
+            <div className="restaurant-name" key={restaurant.id}>
+              {restaurant.name}
+            </div>
+          </div>
+          <div className="card">
+            <div className="restaurant-name" key={restaurant.id}>
+              {restaurant.name}
+            </div>
+          </div>
+        </div>
+      );
     });
     return <div> {listItems} </div>;
   }
