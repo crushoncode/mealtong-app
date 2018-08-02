@@ -1,5 +1,4 @@
 import React from 'react';
-import { SetTemp } from './SetTemp';
 import { Deck } from './Deck';
 
 // before making functions in SetTemp component,
@@ -7,44 +6,32 @@ import { Deck } from './Deck';
 
 class Body extends React.Component {
   state = {
-    temperature: 0
-  };
-
-  changeTemp = (temp) => {
-    this.setState(() => {
-      return {
-        temperature: temp
-      };
-    });
+    temperature: 0,
+    maxValue: 100, // the higher the smoother when dragging
+    speed: 5
   };
 
   handleChange = (e) => {
     this.setState({ value: e.target.value });
   };
 
-  // temperature {this.state.value} is passed into Deck temperature={this.state value}
-
   render() {
     return (
       <React.Fragment>
-        <div className="slidecontainer">
-          <input
-            type="range"
-            min="0"
-            max="40"
-            defaultValue="20"
-            value={this.state.value}
-            className="slider"
-            onChange={this.handleChange}
-            id="myRange"
-          />
-          <SetTemp changeTemp={this.changeTemp} />
-          <p> temperature={this.state.value} </p>
-        </div>
-
-        <div>
-          <Deck temperature={this.state.value} />
-        </div>
+        <input
+          type="range"
+          min="0"
+          max="40"
+          defaultValue="20"
+          value={this.state.value}
+          className="range"
+          onChange={this.handleChange}
+          id="myRange"
+        />
+        <p className="temp-indicator">
+          The current temperature is {this.state.value}ºC.
+        </p>
+        <Deck temperature={this.state.value} />
       </React.Fragment>
     );
   }
