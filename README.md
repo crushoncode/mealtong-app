@@ -4,6 +4,12 @@
 
 ## ongoing project
 
+# Planning
+
+![trello](src/img/Trello.png)
+
 # Design Mock-Up
 
-![mealtong](src/css/img/mealtong.png)
+- version 1
+
+![mealtong](src/img/mealtong.png)
